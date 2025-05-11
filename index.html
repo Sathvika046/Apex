@@ -5,6 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
         <title>Basic HTML </title>
+        <style>
+            *{
+                font-family:'Times New Roman', Times, serif;
+                background-color:aliceblue;
+                margin: 20px;
+                padding: auto;
+    
+            }
+        h1, h2,h3,h4 
+        {
+            color: rgba(0, 0, 0, 0.795);
+        }
+        p
+            font-size: medium;
+        }
+        img{
+            height: 200px;
+            margin: 20px;
+            border: 2px solid black;
+            border-radius: 2%;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        button{
+            margin-left:25px;
+            background-color: rgba(0, 128, 0, 0.449);
+            border-radius:10%;
+            height: 25px;
+             }
+
+        </style>
     </head>
     <body>
         <!-- heading1 -->
@@ -38,7 +71,12 @@
 
         <!-- button -->
         <button onclick="msg()">Click me</button>
-        <script src="script.js"></script>
-    </body>
 
+    </body>
+<script>
+    function msg()
+{
+    window.alert("Please Visit Again");
+}
+</script>
 </html>
