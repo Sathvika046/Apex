@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Folk Dances of India - Flip Cards</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(245, 245, 220, 0.45);
+    }
+
+    h2 {
+      text-align: center;
+      height: 150px;
+      line-height: 150px;
+      font-size: 4rem;
+      letter-spacing: 2px;
+    }
+
+    /* ⭐ Improved Grid Layout */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .card {
+      width: 100%;
+      height: 380px;
+      perspective: 1200px;
+    }
+
+    /* Smooth Flip */
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.9s ease;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* ⭐ Modern Card Look */
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background: #222;
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      font-size: 1.1rem;
+      gap: 20px;
+    }
+
+    /* Beautiful Button */
+    .card-back button {
+      padding: 12px 26px;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .card-back button:hover {
+      background: #ff3f3f;
+      transform: scale(1.07);
+    }
+
+    /* 📱 Mobile Responsive */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 2.2rem;
+        height: 100px;
+        line-height: 100px;
+      }
+
+      .card {
+        height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Folk Dances In INDIA</h2>
+  </header>
+
+  <div class="container">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808462/bharatanatyam_olsb0d.jpg">
+        </div>
+        <div class="card-back">
+          <p>Bharatanatyam is a classical Indian dance from Tamil Nadu.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Bharatanatyam')">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808461/kathak_v9a0oe.jpg">
+        </div>
+        <div class="card-back">
+          <p>Kathak is a classical dance that originated in Uttar Pradesh.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Kathak')">Explore</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808463/kuchipudi_ds6d60.jpg">
+        </div>
+        <div class="card-back">
+          <p>Kuchipudi originates from the village of Kuchipudi in Andhra Pradesh.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Kuchipudi')">Visit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808462/Manipuri_bmfvgv.jpg">
+        </div>
+        <div class="card-back">
+          <p>Manipuri dance originates from the state of Manipur.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Manipuri_dance')">Read</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808462/odissi_wokvzo.jpg">
+        </div>
+        <div class="card-back">
+          <p>Odissi is a major classical dance from Odisha.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Odissi')">Know More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808461/Sattriya_igcm7v.jpg">
+        </div>
+        <div class="card-back">
+          <p>Sattriya is a classical Indian dance from Assam.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Sattriya')">Discover</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808461/kathakali_ab8dbf.jpg">
+        </div>
+        <div class="card-back">
+          <p>Kathakali is a classical dance-drama from Kerala.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Kathakali')">Know More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808462/Mohiniattam_rlx4d6.jpg">
+        </div>
+        <div class="card-back">
+          <p>Mohiniyattam is a graceful classical dance from Kerala.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Mohiniyattam')">Discover</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808461/Garba_idalnv.jpg">
+        </div>
+        <div class="card-back">
+          <p>Garba is a popular folk dance of Gujarat.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Garba_(dance)')">Know More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763808462/Ghoomar_mrqyrl.webp">
+        </div>
+        <div class="card-back">
+          <p>Ghoomar is a traditional folk dance of Rajasthan.</p>
+          <button onclick="redirect('https://en.wikipedia.org/wiki/Ghoomar')">Discover</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 11 -->
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763809782/lavani_hlf1w7.avif" alt="Lavani">
+    </div>
+    <div class="card-back">
+      <p>Lavani is a traditional folk dance of Maharashtra known for its powerful rhythm.</p>
+      <button onclick="redirect('https://en.wikipedia.org/wiki/Lavani')">Explore</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 12 -->
+<div class="card">
+  <div class="card-inner">
+    <div class="card-front">
+      <img src="https://res.cloudinary.com/duracoq4p/image/upload/v1763809782/bhangra_jeaiqq.webp" alt="Bhangra">
+    </div>
+    <div class="card-back">
+      <p>Bhangra is a lively and energetic folk dance from Punjab.</p>
+      <button onclick="redirect('https://en.wikipedia.org/wiki/Bhangra')">Know More</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <script>
+    function redirect(url) {
+      if (confirm("You are about to leave this site. Continue?")) {
+        window.location.href = url;
+      }
+    }
+  </script>
+
+</body>
+</html>
